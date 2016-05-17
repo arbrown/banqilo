@@ -31,6 +31,18 @@ class App extends Component {
 
     Elos.update({ _id: p1._id}, {$set: {elo: p1.elo}});
     Elos.update({ _id: p2._id}, {$set: {elo: p2.elo}});
+
+    this.clearForm();
+  }
+
+  clearForm() {
+    //would be nice to add some jQueryUI flash or something here
+
+    ReactDOM.findDOMNode(this.refs.p1input).value = "";
+    ReactDOM.findDOMNode(this.refs.p2input).value = "";
+    ReactDOM.findDOMNode(this.refs.p1won).checked = false;
+    ReactDOM.findDOMNode(this.refs.p2won).checked = false;
+
   }
 
   findPlayer(name) {
