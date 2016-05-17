@@ -66,6 +66,11 @@ class App extends Component {
         <header>
           <h1>Banqi Elo Scoreboard</h1>
         </header>
+        <span id="forkongithub">
+          <a href="https://github.com/arbrown/banqilo">
+            Fork me on GitHub
+          </a>
+        </span>
       <ol className="eloList">
         {this.renderElos()}
       </ol>
